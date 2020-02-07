@@ -12,13 +12,14 @@
 
     <!-- We like short arrays. -->
     <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
 	
-		<!-- It's fine. -->
-		<exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon" />
+    <!-- It's fine. -->
+    <exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon" />
 
     <exclude name="WordPress.WhiteSpace.PrecisionAlignment" />
-
+    <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
+    
 		<!-- Exclude other conflicting rules. -->
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned" />
 		<exclude name="WordPress.PHP.DevelopmentFunctions.error_log_trigger_error" />
