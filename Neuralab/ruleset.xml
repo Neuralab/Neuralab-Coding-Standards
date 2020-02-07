@@ -1,81 +1,75 @@
 <?xml version="1.0"?>
 <ruleset name="Neuralab">
-  <description>a.neuralab.coding-standard</description>
-
-  <!-- We'll use spaces for indentation! -->
-  <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
-
-  <rule ref="WordPress-Core">
-  
-    <!-- Allow space indent! -->
-    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
-
-    <!-- We like short arrays. -->
-    <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
-    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
-	
-    <!-- It's fine. -->
-    <exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon" />
-
-    <exclude name="WordPress.WhiteSpace.PrecisionAlignment" />
-    <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
-    
+	<description>
+		a.neuralab.coding-standard
+	</description>
+	<!-- We'll use spaces for indentation! -->
+	<rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+	<rule ref="WordPress-Core">
+		<!-- Allow space indent! -->
+		<exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
+		<!-- We like short arrays. -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+		<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+		<!-- It's fine. -->
+		<exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon" />
+		<exclude name="WordPress.WhiteSpace.PrecisionAlignment" />
+		<exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
+		<!-- override tab width -->
+		<exclude name="WordPress.Arrays.ArrayIndentation" />
+		<rule ref="WordPress.Arrays.ArrayIndentation">
+			<properties>
+				<property name="tab-width" value="2" />
+			</properties>
+		</rule>
 		<!-- Exclude other conflicting rules. -->
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned" />
 		<exclude name="WordPress.PHP.DevelopmentFunctions.error_log_trigger_error" />
 		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning" />
-
 		<!-- Yoda, say no to. -->
 		<exclude name="WordPress.PHP.YodaConditions" />
 	</rule>
-  <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
-  <rule ref="PEAR.Functions.FunctionCallSignature">
-    <properties>
-      <property name="indent" value="2"/>
-    </properties>
-  </rule>
-  <!-- Whitespace - indent with 2 spaces, dissalow tabs -->
-  <rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="indent" value="2"/>
-      <property name="exact" value="true"/>
-      <property name="tabIndent" value="false"/>
-      <property name="ignoreIndentationTokens" type="array" value="T_HEREDOC,T_NOWDOC,T_INLINE_HTML"/>
-    </properties>
-  </rule>
-
-  <!-- set switch indent to 2 instead of 4 -->
-  <rule ref="PSR2.ControlStructures.SwitchDeclaration">
-    <properties>
-      <property name="indent" value="2"/>
-    </properties>
-  </rule>
-
-  
-
+	<rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+	<rule ref="PEAR.Functions.FunctionCallSignature">
+		<properties>
+			<property name="indent" value="2" />
+		</properties>
+	</rule>
+	<!-- Whitespace - indent with 2 spaces, dissalow tabs -->
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<properties>
+			<property name="indent" value="2" />
+			<property name="exact" value="true" />
+			<property name="tabIndent" value="false" />
+			<property name="ignoreIndentationTokens" type="array" value="T_HEREDOC,T_NOWDOC,T_INLINE_HTML" />
+		</properties>
+	</rule>
+	<!-- set switch indent to 2 instead of 4 -->
+	<rule ref="PSR2.ControlStructures.SwitchDeclaration">
+		<properties>
+			<property name="indent" value="2" />
+		</properties>
+	</rule>
 	<!-- Prefer alignment over line length. -->
 	<rule ref="WordPress.Arrays.MultipleStatementAlignment">
 		<properties>
 			<property name="maxColumn" value="1000" />
 		</properties>
 	</rule>
-
 	<rule ref="WordPress.DB.SlowDBQuery" />
-
 	<!-- Allow . in hook names. -->
 	<rule ref="WordPress.NamingConventions.ValidHookName">
 		<properties>
 			<property name="additionalWordDelimiters" value="." />
 		</properties>
 	</rule>
-
 	<rule ref="WordPress.Security.EscapeOutput" />
-
 	<rule ref="WordPress.Security.PluginMenuSlug" />
 	<rule ref="WordPress.Security.PluginMenuSlug.Using__FILE__">
-		<type>error</type>
+		<type>
+			error
+		</type>
 	</rule>
-
 	<!-- Allow the use of filesystem functions. -->
 	<rule ref="WordPress.WP.AlternativeFunctions">
 		<properties>
@@ -83,39 +77,49 @@
 			<property name="exclude" value="json_encode,json_decode" />
 		</properties>
 	</rule>
-
 	<rule ref="WordPress.WP.CronInterval" />
 	<rule ref="WordPress.WP.CronInterval.CronSchedulesInterval">
-		<type>error</type>
-		<message>Scheduling crons at %s sec ( less than %s minutes ) is prohibited.</message>
+		<type>
+			error
+		</type>
+		<message>
+			Scheduling crons at %s sec ( less than %s minutes ) is prohibited.
+		</message>
 	</rule>
-
 	<rule ref="WordPress.WP.PostsPerPage" />
 	<rule ref="WordPress.WP.PostsPerPage.posts_per_page_numberposts">
-		<type>error</type>
+		<type>
+			error
+		</type>
 	</rule>
 	<rule ref="WordPress.WP.PostsPerPage.posts_per_page_posts_per_page">
-		<type>error</type>
+		<type>
+			error
+		</type>
 	</rule>
 	<rule ref="PEAR.Functions.FunctionCallSignature">
 		<properties>
-			<property name="allowMultipleArguments" value="true"/>
+			<property name="allowMultipleArguments" value="true" />
 		</properties>
 	</rule>
 	<rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
-		<severity phpcs-only="true">0</severity>
+		<severity phpcs-only="true">
+			0
+		</severity>
 	</rule>
 	<rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
-		<severity phpcs-only="true">0</severity>
+		<severity phpcs-only="true">
+			0
+		</severity>
 	</rule>
-
 	<!-- Single statement per line. -->
 	<rule ref="Generic.Formatting.DisallowMultipleStatements" />
-
-	<!-- Declare symbols or run code, but not both. -->
-	<rule ref="PSR1.Files.SideEffects" />
-
 	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
 		<exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines" />
+	</rule>
+	<rule ref="Generic.Arrays.ArrayIndent">
+		<properties>
+			<property name="indent" value="2" />
+		</properties>
 	</rule>
 </ruleset>
