@@ -106,4 +106,5 @@
       <property name="indent" value="2"/>
     </properties>
   </rule>
+  <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
 </ruleset>
