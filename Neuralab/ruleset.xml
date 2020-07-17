@@ -2,7 +2,7 @@
 <ruleset name="Neuralab">
   <description>a.neuralab.coding-standard</description>
 	
-  <rule ref="Neuralab-Empty"/>
+  <rule ref="Neuralab-Silent"/>
 	<rule ref="WordPress-Core" />
   <rule ref="WordPress-Docs">
 		<!-- Don't force file comments -->
