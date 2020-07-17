@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="Neuralab Silent">
+  <description>a.neuralab.coding-standard</description>
+  <rule ref="Squiz.PHP.Eval.Discouraged">
+    <type>error</type>
+    <message>Please, don't use eval()</message>
+  </rule>
+</ruleset>
