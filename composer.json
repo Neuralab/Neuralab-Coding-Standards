@@ -7,7 +7,7 @@
 		"php": ">=7.1",
 		"wp-coding-standards/wpcs": "2.2.1",
 		"automattic/vipwpcs": "2.0.0",
-		"squizlabs/php_codesniffer": "~3.5.4",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.6.2"
+		"squizlabs/php_codesniffer": "~3.5.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6.0"
 	}
 }
