@@ -30,4 +30,6 @@
 	</rule>
 	<!-- We prefer short arrays -->
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+	<!-- Support for PHP 8.1 and above (https://github.com/WordPress/WordPress-Coding-Standards/issues/2035). -->
+	<ini name="error_reporting" value="E_ALL &#38; ~E_DEPRECATED" />
 </ruleset>
