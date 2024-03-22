@@ -1,7 +1,7 @@
 # Neuralab Coding Standards
 
-`composer global require neuralab/coding-standards:dev-master`
+`composer global require neuralab/coding-standards`
 
 or
 
-`composer require --dev neuralab/coding-standards:dev-master`
+`composer require --dev neuralab/coding-standards`
